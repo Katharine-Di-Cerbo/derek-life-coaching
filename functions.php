@@ -262,3 +262,10 @@ genesis_register_sidebar( array(
 	'name'        => __( 'Front Page 3', 'digital' ),
 	'description' => __( 'This is the 3rd section on the front page.', 'digital' ),
 ) );
+
+genesis_register_sidebar( array(
+	'id'		=> 'core-page-widget',
+	'name'		=> __( 'Core Page Widget'),
+	'description'	=> __( 'This is where you put the title of your core pages'),
+) );
+

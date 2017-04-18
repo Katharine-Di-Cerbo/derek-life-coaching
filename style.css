@@ -1075,6 +1075,13 @@ a[rel~="attachment"]:hover,
 	text-align: center;
 }
 
+.dandy-core-page {
+	background-color: #00ffa7;
+	width: 100%;
+	clear: both; 
+	height: 400px;
+}
+
 /* Featured Content
 --------------------------------------------- */
 
