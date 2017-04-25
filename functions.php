@@ -263,9 +263,21 @@ genesis_register_sidebar( array(
 	'description' => __( 'This is the 3rd section on the front page.', 'digital' ),
 ) );
 
+/*Dandy theme widgets*/
+
 genesis_register_sidebar( array(
-	'id'		=> 'core-page-widget',
+	'id'		=> 'core-page-widget-2',
 	'name'		=> __( 'Core Page Widget'),
 	'description'	=> __( 'This is where you put the title of your core pages'),
 ) );
+
+add_action ('genesis_after_header', 'core_page_widget_f');
+	function core_page_widget_f () {
+		if (is_page_template('core_page.php')) 
+		genesis_widget_area( 'core-page-widget-2', array(
+		'before' => '<div class="core-page-widget-2 widget-area"><div class="wrap">',
+		'after'  => '</div></div>',
+	) );
+	}
+	
 

@@ -2277,3 +2277,9 @@ p.form-submit,
 	}
 
 }
+
+.core-page-widget-2 {
+	height: 440px;
+	background-color: blue;
+	width: 100%;
+}
