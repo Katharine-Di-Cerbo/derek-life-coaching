@@ -1075,12 +1075,41 @@ a[rel~="attachment"]:hover,
 	text-align: center;
 }
 
-.dandy-core-page {
-	background-color: #00ffa7;
+.core-page-1 {
+	height: 440px;
 	width: 100%;
-	clear: both; 
-	height: 400px;
 }
+
+.core-page-2 {
+	height: 440px;
+	background-color: blue;
+	width: 100%;
+}
+
+.core-page-3 {
+	height: 440px;
+	background-color: blue;
+	width: 100%;
+}
+
+.core-page-4 {
+	height: 440px;
+	background-color: blue;
+	width: 100%;
+}
+
+.core-page-5 {
+	height: 440px;
+	background-color: blue;
+	width: 100%;
+}
+
+.core-page-6 {
+	height: 440px;
+	background-color: blue;
+	width: 100%;
+}
+
 
 /* Featured Content
 --------------------------------------------- */
@@ -2278,8 +2307,3 @@ p.form-submit,
 
 }
 
-.core-page-widget-2 {
-	height: 440px;
-	background-color: blue;
-	width: 100%;
-}

@@ -263,21 +263,123 @@ genesis_register_sidebar( array(
 	'description' => __( 'This is the 3rd section on the front page.', 'digital' ),
 ) );
 
-/*Dandy theme widgets*/
+/*Dandy core page widgets*/
 
 genesis_register_sidebar( array(
-	'id'		=> 'core-page-widget-2',
-	'name'		=> __( 'Core Page Widget'),
+	'id'		=> 'core-page-widget-1',
+	'name'		=> __( 'Core Page 1'),
 	'description'	=> __( 'This is where you put the title of your core pages'),
 ) );
 
-add_action ('genesis_after_header', 'core_page_widget_f');
-	function core_page_widget_f () {
-		if (is_page_template('core_page.php')) 
-		genesis_widget_area( 'core-page-widget-2', array(
-		'before' => '<div class="core-page-widget-2 widget-area"><div class="wrap">',
+add_action ('genesis_after_header', 'core_page_widget_1');
+	function core_page_widget_1 () {
+		if (is_page_template('core-page-1.php')) 
+		genesis_widget_area( 'core-page-widget-1', array(
+		'before' => '<div class="core-page-1 widget-area"><div class="wrap">',
 		'after'  => '</div></div>',
 	) );
 	}
 	
+genesis_register_sidebar( array(
+	'id'		=> 'core-page-widget-2',
+	'name'		=> __( 'Core Page 2'),
+	'description'	=> __( 'This is where you put the title of your core pages'),
+) );
+
+add_action ('genesis_after_header', 'core_page_widget_2');
+	function core_page_widget_2 () {
+		if (is_page_template('core-page-2.php')) 
+		genesis_widget_area( 'core-page-widget-2', array(
+		'before' => '<div class="core-page-2 widget-area"><div class="wrap">',
+		'after'  => '</div></div>',
+	) );
+	}
+
+genesis_register_sidebar( array(
+	'id'		=> 'core-page-widget-3',
+	'name'		=> __( 'Core Page 3'),
+	'description'	=> __( 'This is where you put the title of your core pages'),
+) );
+
+add_action ('genesis_after_header', 'core_page_widget_3');
+	function core_page_widget_3 () {
+		if (is_page_template('core-page-3.php')) 
+		genesis_widget_area( 'core-page-widget-3', array(
+		'before' => '<div class="core-page-3 widget-area"><div class="wrap">',
+		'after'  => '</div></div>',
+	) );
+	}
+
+genesis_register_sidebar( array(
+	'id'		=> 'core-page-widget-4',
+	'name'		=> __( 'Core Page 4'),
+	'description'	=> __( 'This is where you put the title of your core pages'),
+) );
+
+add_action ('genesis_after_header', 'core_page_widget_4');
+	function core_page_widget_4 () {
+		if (is_page_template('core-page-4.php')) 
+		genesis_widget_area( 'core-page-widget-4', array(
+		'before' => '<div class="core-page-4 widget-area"><div class="wrap">',
+		'after'  => '</div></div>',
+	) );
+	}
+
+genesis_register_sidebar( array(
+	'id'		=> 'core-page-widget-5',
+	'name'		=> __( 'Core Page 5'),
+	'description'	=> __( 'This is where you put the title of your core pages'),
+) );
+
+add_action ('genesis_after_header', 'core_page_widget_5');
+	function core_page_widget_5 () {
+		if (is_page_template('core-page-5.php')) 
+		genesis_widget_area( 'core-page-widget-5', array(
+		'before' => '<div class="core-page-5 widget-area"><div class="wrap">',
+		'after'  => '</div></div>',
+	) );
+	}
+
+genesis_register_sidebar( array(
+	'id'		=> 'core-page-widget-6',
+	'name'		=> __( 'Core Page 6'),
+	'description'	=> __( 'This is where you put the title of your core pages'),
+) );
+
+add_action ('genesis_after_header', 'core_page_widget_6');
+	function core_page_widget_6 () {
+		if (is_page_template('core-page-6.php')) 
+		genesis_widget_area( 'core-page-widget-6', array(
+		'before' => '<div class="core-page-6 widget-area"><div class="wrap">',
+		'after'  => '</div></div>',
+	) );
+	}
+
+	
+/* Backstretch */ 
+
+	wp_enqueue_script( 'dandy-backstretch-set-core-1', get_theme_file_uri('/js/backstretch-set-core-1.js') , array( 'jquery', 'digital-backstretch' ), '1.0.0' );
+	
+	wp_localize_script('dandy-backstretch-set-core-1', 'dandy_backstretch_1_uri', array('backstretch_image_1_uri' => get_theme_file_uri('images/Pavita_Footer_Image.jpg' )));
+
+wp_enqueue_script( 'dandy-backstretch-set-core-2', get_theme_file_uri('/js/backstretch-set-core-2.js') , array( 'jquery', 'digital-backstretch' ), '1.0.0' );
+	
+	wp_localize_script('dandy-backstretch-set-core-2', 'dandy_backstretch_2_uri', array('backstretch_image_2_uri' => get_theme_file_uri('images/Meet_Pavita.jpg' )));
+	
+wp_enqueue_script( 'dandy-backstretch-set-core-3', get_theme_file_uri('/js/backstretch-set-core-3.js') , array( 'jquery', 'digital-backstretch' ), '1.0.0' );
+	
+	wp_localize_script('dandy-backstretch-set-core-3', 'dandy_backstretch_3_uri', array('backstretch_image_3_uri' => get_theme_file_uri('images/Praise_Pavita.jpg' )));
+	
+wp_enqueue_script( 'dandy-backstretch-set-core-4', get_theme_file_uri('/js/backstretch-set-core-4.js') , array( 'jquery', 'digital-backstretch' ), '1.0.0' );
+	
+	wp_localize_script('dandy-backstretch-set-core-4', 'dandy_backstretch_4_uri', array('backstretch_image_4_uri' => get_theme_file_uri('images/Editing_Services.jpg' )));
+	
+wp_enqueue_script( 'dandy-backstretch-set-core-5', get_theme_file_uri('/js/backstretch-set-core-5.js') , array( 'jquery', 'digital-backstretch' ), '1.0.0' );
+	
+	wp_localize_script('dandy-backstretch-set-core-5', 'dandy_backstretch_5_uri', array('backstretch_image_5_uri' => get_theme_file_uri('images/Get_Quote.jpg' )));
+	
+wp_enqueue_script( 'dandy-backstretch-set-core-6', get_theme_file_uri('/js/backstretch-set-core-6.js') , array( 'jquery', 'digital-backstretch' ), '1.0.0' );
+	
+	wp_localize_script('dandy-backstretch-set-core-6', 'dandy_backstretch_6_uri', array('backstretch_image_6_uri' => get_theme_file_uri('images/Pavita_Blog.jpg' )));
+
 
