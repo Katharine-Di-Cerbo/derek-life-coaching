@@ -8,6 +8,7 @@ Template Name: Core Page 2
 */
 
 
+remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
 
 //* Run the Genesis loop
 genesis();

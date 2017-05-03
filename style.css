@@ -1077,13 +1077,11 @@ a[rel~="attachment"]:hover,
 
 .core-page-1 {
 	height: 440px;
-	width: 100%;
+	padding: 10%;
 }
 
 .core-page-2 {
 	height: 440px;
-	background-color: blue;
-	width: 100%;
 }
 
 .core-page-3 {

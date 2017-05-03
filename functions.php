@@ -275,7 +275,7 @@ add_action ('genesis_after_header', 'core_page_widget_1');
 	function core_page_widget_1 () {
 		if (is_page_template('core-page-1.php')) 
 		genesis_widget_area( 'core-page-widget-1', array(
-		'before' => '<div class="core-page-1 widget-area"><div class="wrap">',
+		'before' => '<div class="core-page-1"><div class="wrap">',
 		'after'  => '</div></div>',
 	) );
 	}
@@ -358,27 +358,29 @@ add_action ('genesis_after_header', 'core_page_widget_6');
 	
 /* Backstretch */ 
 
-	wp_enqueue_script( 'dandy-backstretch-set-core-1', get_theme_file_uri('/js/backstretch-set-core-1.js') , array( 'jquery', 'digital-backstretch' ), '1.0.0' );
+	wp_enqueue_script( 'dandy-backstretch', get_bloginfo( 'stylesheet_directory' ) . '/js/backstretch.js', array( 'jquery' ), '1.0.0' );
+
+	wp_enqueue_script( 'dandy-backstretch-set-core-1', get_theme_file_uri('/js/backstretch-set-core-1.js') , array( 'jquery', 'dandy-backstretch' ), '1.0.0' );
 	
 	wp_localize_script('dandy-backstretch-set-core-1', 'dandy_backstretch_1_uri', array('backstretch_image_1_uri' => get_theme_file_uri('images/Pavita_Footer_Image.jpg' )));
 
-wp_enqueue_script( 'dandy-backstretch-set-core-2', get_theme_file_uri('/js/backstretch-set-core-2.js') , array( 'jquery', 'digital-backstretch' ), '1.0.0' );
+wp_enqueue_script( 'dandy-backstretch-set-core-2', get_theme_file_uri('/js/backstretch-set-core-2.js') , array( 'jquery', 'dandy-backstretch' ), '1.0.0' );
 	
 	wp_localize_script('dandy-backstretch-set-core-2', 'dandy_backstretch_2_uri', array('backstretch_image_2_uri' => get_theme_file_uri('images/Meet_Pavita.jpg' )));
 	
-wp_enqueue_script( 'dandy-backstretch-set-core-3', get_theme_file_uri('/js/backstretch-set-core-3.js') , array( 'jquery', 'digital-backstretch' ), '1.0.0' );
+wp_enqueue_script( 'dandy-backstretch-set-core-3', get_theme_file_uri('/js/backstretch-set-core-3.js') , array( 'jquery', 'dandy-backstretch' ), '1.0.0' );
 	
 	wp_localize_script('dandy-backstretch-set-core-3', 'dandy_backstretch_3_uri', array('backstretch_image_3_uri' => get_theme_file_uri('images/Praise_Pavita.jpg' )));
 	
-wp_enqueue_script( 'dandy-backstretch-set-core-4', get_theme_file_uri('/js/backstretch-set-core-4.js') , array( 'jquery', 'digital-backstretch' ), '1.0.0' );
+wp_enqueue_script( 'dandy-backstretch-set-core-4', get_theme_file_uri('/js/backstretch-set-core-4.js') , array( 'jquery', 'dandy-backstretch' ), '1.0.0' );
 	
 	wp_localize_script('dandy-backstretch-set-core-4', 'dandy_backstretch_4_uri', array('backstretch_image_4_uri' => get_theme_file_uri('images/Editing_Services.jpg' )));
 	
-wp_enqueue_script( 'dandy-backstretch-set-core-5', get_theme_file_uri('/js/backstretch-set-core-5.js') , array( 'jquery', 'digital-backstretch' ), '1.0.0' );
+wp_enqueue_script( 'dandy-backstretch-set-core-5', get_theme_file_uri('/js/backstretch-set-core-5.js') , array( 'jquery', 'dandy-backstretch' ), '1.0.0' );
 	
 	wp_localize_script('dandy-backstretch-set-core-5', 'dandy_backstretch_5_uri', array('backstretch_image_5_uri' => get_theme_file_uri('images/Get_Quote.jpg' )));
 	
-wp_enqueue_script( 'dandy-backstretch-set-core-6', get_theme_file_uri('/js/backstretch-set-core-6.js') , array( 'jquery', 'digital-backstretch' ), '1.0.0' );
+wp_enqueue_script( 'dandy-backstretch-set-core-6', get_theme_file_uri('/js/backstretch-set-core-6.js') , array( 'jquery', 'dandy-backstretch' ), '1.0.0' );
 	
 	wp_localize_script('dandy-backstretch-set-core-6', 'dandy_backstretch_6_uri', array('backstretch_image_6_uri' => get_theme_file_uri('images/Pavita_Blog.jpg' )));
 
